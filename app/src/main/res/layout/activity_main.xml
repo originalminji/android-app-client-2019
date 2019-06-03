@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e5f6f7"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main_header" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="음식 추천"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/menuForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu_form" />
+
+    <ToggleButton
+        android:id="@+id/koreanFood"
+        android:layout_width="111dp"
+        android:layout_height="111dp"
+        android:checked="false"
+        android:onClick="onMenuButtonClicked"
+        android:layout_centerHorizontal="true"
+        android:textOff="한식"
+        android:textOn="한식"
+        app:layout_constraintStart_toStartOf="@+id/menuForm"
+        app:layout_constraintTop_toTopOf="@+id/menuForm" />
+
+    <ToggleButton
+        android:id="@+id/chinaFood"
+        android:layout_width="111dp"
+        android:layout_height="111dp"
+        android:checked="false"
+        android:onClick="onMenuButtonClicked"
+        android:layout_centerHorizontal="true"
+        android:textOff="중식"
+        android:textOn="중식"
+        app:layout_constraintEnd_toStartOf="@+id/japanFood"
+        app:layout_constraintStart_toEndOf="@+id/koreanFood"
+        app:layout_constraintTop_toTopOf="@+id/menuForm" />
+
+    <ToggleButton
+        android:id="@+id/japanFood"
+        android:layout_width="111dp"
+        android:layout_height="111dp"
+        android:checked="false"
+        android:onClick="onMenuButtonClicked"
+        android:layout_centerHorizontal="true"
+        android:textOff="일식"
+        android:textOn="일식"
+        app:layout_constraintEnd_toEndOf="@+id/menuForm"
+        app:layout_constraintTop_toTopOf="@+id/menuForm" />
+
+    <ToggleButton
+        android:id="@+id/americaFood"
+        android:layout_width="111dp"
+        android:layout_height="111dp"
+        android:checked="false"
+        android:onClick="onMenuButtonClicked"
+        android:layout_centerHorizontal="true"
+        android:textOff="양식"
+        android:textOn="양식"
+        app:layout_constraintBottom_toTopOf="@+id/guitar"
+        app:layout_constraintStart_toStartOf="@+id/menuForm"
+        app:layout_constraintTop_toBottomOf="@+id/koreanFood" />
+
+    <ToggleButton
+        android:id="@+id/schoolFood"
+        android:layout_width="111dp"
+        android:layout_height="111dp"
+        android:checked="false"
+        android:onClick="onMenuButtonClicked"
+        android:layout_centerHorizontal="true"
+        android:textOff="분식"
+        android:textOn="분식"
+        app:layout_constraintBottom_toBottomOf="@+id/menuForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/menuForm" />
+
+    <ToggleButton
+        android:id="@+id/desert"
+        android:layout_width="111dp"
+        android:layout_height="111dp"
+        android:checked="false"
+        android:onClick="onMenuButtonClicked"
+        android:layout_centerHorizontal="true"
+        android:textOff="디저트"
+        android:textOn="디저트"
+        app:layout_constraintBottom_toTopOf="@+id/fastFood"
+        app:layout_constraintEnd_toEndOf="@+id/menuForm"
+        app:layout_constraintTop_toBottomOf="@+id/japanFood" />
+
+    <ToggleButton
+        android:id="@+id/guitar"
+        android:layout_width="111dp"
+        android:layout_height="111dp"
+        android:checked="false"
+        android:onClick="onMenuButtonClicked"
+        android:layout_centerHorizontal="true"
+        android:textOff="소수민족"
+        android:textOn="소수민족"
+        app:layout_constraintBottom_toBottomOf="@+id/menuForm"
+        app:layout_constraintStart_toStartOf="@+id/menuForm" />
+
+    <ToggleButton
+        android:id="@+id/nightFood"
+        android:layout_width="111dp"
+        android:layout_height="111dp"
+        android:checked="false"
+        android:onClick="onMenuButtonClicked"
+        android:layout_centerHorizontal="true"
+        android:textOff="야식"
+        android:textOn="야식"
+        app:layout_constraintBottom_toBottomOf="@+id/menuForm"
+        app:layout_constraintEnd_toStartOf="@+id/fastFood"
+        app:layout_constraintStart_toEndOf="@+id/guitar" />
+
+    <ToggleButton
+        android:id="@+id/fastFood"
+        android:layout_width="111dp"
+        android:layout_height="111dp"
+        android:checked="false"
+        android:onClick="onMenuButtonClicked"
+        android:layout_centerHorizontal="true"
+        android:textOff="패스트푸드"
+        android:textOn="패스트푸드"
+        app:layout_constraintBottom_toBottomOf="@+id/menuForm"
+        app:layout_constraintEnd_toEndOf="@+id/desert" />
+
+    <Button
+        android:id="@+id/sendButtonOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_on"
+        android:text="선 택 하 기"
+        android:textColor="#ffffff"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sendButtonOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_off"
+        android:text="선 택 해 주 세 요"
+        android:textColor="#ffffff"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘은"
+        android:textColor="#555555"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/chinaFood"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/wannaEat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="먹고싶다!"
+        android:textColor="#555555"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/sendButtonOn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nightFood" />
+
+</android.support.constraint.ConstraintLayout>
